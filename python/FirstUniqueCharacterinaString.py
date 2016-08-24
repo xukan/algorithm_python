@@ -1,0 +1,46 @@
+'''
+Given a string, find the first non-repeating character in it and return it's index. 
+If it doesn't exist, return -1.
+
+Examples:
+
+s = "leetcode"
+return 0.
+
+s = "loveleetcode",
+return 2.
+Note: You may assume the string contain only lowercase letters.
+'''
+class Solution(object):
+    def __init__(self):
+        self.size = 26
+         
+    def firstUniqChar(self, s):
+        """
+        :type s: str
+        :rtype: int
+         
+        """
+        count = self.getCharCountArray(s)
+        k = 0
+      
+        for i in s:
+            if count[ord(i)-ord('a')] == 1:
+                return k
+            k += 1
+      
+        return -1
+      
+    # Returns an array of size 256 containg count
+    # of characters in the passed char array
+    def getCharCountArray(self, string):
+        count = [0] * self.size
+        for i in string:
+            count[ord(i)-ord('a')]+=1
+        return count
+
+ 
+if __name__ == '__main__':
+    s= "loveleetcode"
+    result = Solution().firstUniqChar(s)
+    print result
