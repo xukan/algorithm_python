@@ -31,7 +31,7 @@ class Solution(object):
       
         return -1
       
-    # Returns an array of size 256 containg count
+    # Returns an array of size 26 containg count
     # of characters in the passed char array
     def getCharCountArray(self, string):
         count = [0] * self.size

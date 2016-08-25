@@ -1,0 +1,27 @@
+'''
+Created on Aug 24, 2016
+
+@author: Onerepublic
+'''
+class Solution(object):
+    def lexicalOrder(self, n):
+        """
+        :type n: int
+        :rtype: List[int]
+        """
+        list = []
+        stack = [ 1 ]
+        while stack:
+            num = stack.pop()
+            list.append( num )
+            if num + 1 < n:
+                stack.append( num + 1 )
+            if stack*10 < n and stack*10 % 10 < 9:
+                stack.append( stack * 10 )
+        return list
+            
+if __name__ == '__main__':
+    input = 13
+    result = Solution().lexicalOrder( input )
+    print result
+        

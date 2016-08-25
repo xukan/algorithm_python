@@ -1,0 +1,17 @@
+'''
+Created on Aug 24, 2016
+
+@author: Onerepublic
+'''
+class Solution(object):
+    def lexicalOrder(self, n):
+        """
+        :type n: int
+        :rtype: List[int]
+        """
+        
+if __name__ == '__main__':
+    input = 13
+    result = Solution().lexicalOrder( input )
+    print result
+        
