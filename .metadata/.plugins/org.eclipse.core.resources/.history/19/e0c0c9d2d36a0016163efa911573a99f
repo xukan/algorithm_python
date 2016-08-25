@@ -9,7 +9,16 @@ class Solution(object):
         :type n: int
         :rtype: List[int]
         """
-        #可以类比二叉树先根遍历的迭代算法，需要用到栈（Stack）数据结构
+#         list = []
+#         stack = [ 1 ]
+#         while stack:
+#             num = stack.pop()
+#             list.append( num )
+#             if num + 1 < n and (num+1) not in list:
+#                 stack.append( num + 1 )
+#             if num*10 < n and num*10 % 10 < 9 and num * 10 not in list:
+#                 stack.append( num * 10 )
+#         return list
         result = []
         stack = [1]
         while stack:

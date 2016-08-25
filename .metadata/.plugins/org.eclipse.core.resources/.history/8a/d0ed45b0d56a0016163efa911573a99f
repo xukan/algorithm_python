@@ -1,0 +1,28 @@
+'''
+[ 1, 2, 3 ]
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+
+Backtracking
+'''
+class Solution(object):
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        list = []
+        for i in nums:
+            temp = []
+            temp.append( i )
+            
+if __name__ == '__main__':
+    input = [ 1, 2, 3 ]
+    result = Solution().permute( input )
+    print result
