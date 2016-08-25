@@ -1,0 +1,35 @@
+import random
+
+class Solution(object):
+    def __init__(self, nums):
+        """
+        :type nums: List[int]
+        :type size: int
+        """
+        self.nums = nums
+        self.output = nums[:]
+
+    def reset(self):
+        """
+        Resets the array to its original configuration and return it.
+        :rtype: List[int]
+        """
+        self.output = self.nums[:]
+        return self.nums
+
+    def shuffle(self):
+        """
+        Returns a random shuffling of the array.
+        :rtype: List[int]
+        """
+        n = len(self.output)
+        for i in xrange(n):
+            _id = random.randint(i, n - 1)
+            self.output[i], self.output[_id] = self.output[_id], self.output[i]
+        return self.output
+
+if __name__ == '__main__':
+    input = [ 1, 2, 3 ]
+    print output
+    result = Solution( input ).shuffle()
+    print result
